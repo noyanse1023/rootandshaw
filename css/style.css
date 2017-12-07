@@ -1,0 +1,367 @@
+html {
+-ms-touch-action: none;  /* 阻止windows Phone 的默认触摸事件 */
+}
+body,
+div,
+p {
+	margin: 0;
+	padding: 0;
+    font-size: 62.5%;
+}
+ul {
+    list-style: none;
+}
+body {
+	width: 100%;
+    *cursor: default;
+	overflow: hidden;
+	font: 16px/1.5 "Microsoft YaHei",Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial;
+}
+#pageContain {
+	overflow: hidden;
+}
+.page {
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.contain {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: relative;
+	z-index: 0;
+}
+.current .contain,.slide .contain {
+	display: block;
+}
+.current {
+	display: block;
+	z-index: 1;
+}
+.slide {
+	display: block;
+	z-index: 2;
+}
+.swipe {
+    display: block;
+    z-index: 3;
+    transition-duration: 0ms !important;
+    -webkit-transition-duration: 0ms !important;
+}
+.page1 {
+	background: #000;
+}
+.page2 {
+	background: #544253;
+    /*background-image: url(../img/bgggggg.gif);*/
+    background-size: 100% 100%;
+}
+.page3 {
+	background: #fff;
+}
+.page4 {
+	background: #544253;
+}
+.page5 {
+	background: #fff;
+}
+.page6 {
+	background: #fff;
+}
+#navBar {
+	z-index: 3;
+	position: absolute;
+	top: 10%;
+	right: 3%;
+}
+#navBar .active {
+    background: #ccc;
+}
+#navBar li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all .7s ease;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.page1 p,.page2 p,.page7 p {
+    width: 280px;
+    height: 200px;
+    margin-left: -140px;
+    margin-top: -100px;
+    color:#fff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+    transition: all .8s ease;
+    transform-origin: 50% 50%;
+}
+.step1 p {
+    transform: translate(0, -50px);
+    -webkit-transform: translate(0, -50px);
+}
+.step2 p {
+    opacity: 0;
+    transform: scale(2);
+    -webkit-transform: scale(2);
+}
+.step3 p {
+    transform: scale(1);
+    -webkit-transform: scale(1)
+    opacity: 1;
+}
+.step4 p {
+    -webkit-transform: rotate(360deg) translate(0,-200px) scale(.3);
+    transform: rotate(360deg) translate(0,-200px) scale(.3);
+    opacity: 0;
+}
+.mod_loading{
+    background: #1e2c24;
+}
+.loading-img{
+    
+}
+
+.mod_loading .content{
+    margin: 0 0;
+}
+
+
+.root0{
+    width: 200px;
+    height: 100px;
+    background: red;
+}
+.page1 img{
+    width: 100%;
+    /*height: 100%;*/
+    position: relative;
+}
+.cover1{
+    height: 100%;
+}
+.page1 .txt1{
+    font-size: 1.8rem;
+    display: none;
+    z-index: 1000;
+}
+.txt-future-time{
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 4rem;
+    right: 2rem;
+    color: #fff;
+    display: none;
+    z-index: 1000;
+}
+.cover2,.shawbrief{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+.flash-img {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+}
+.page1 p{
+    width: 280px;
+    height: 200px;
+    margin-left: -140px;
+    margin-top: -100px;
+}
+.txt-info{    
+    height: 200px;
+    color: #000;
+    margin: 2rem 4rem;
+    font-size: 1.6rem;
+    opacity: 0;
+    font-family: 'BankGothic Md BT';
+}
+.txt-root-info{
+    width: 200px;
+    position: absolute;
+    right: 0
+}
+.page3 .cover2{
+     right: -2rem;
+}
+.page3 .txt-shaw-info{
+    color: #fff;
+
+}
+.txt-future-note{
+   width: 80%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -40%;
+    bottom: 2rem;
+}
+
+.brief{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: none;
+}
+.t1,.t2{
+    opacity: 0;
+}
+.bgbrief{
+    display: none;
+}
+.title{
+    color: purple;
+    font-size: 18px;
+    line-height: 50px;
+}
+.f-img{
+    width: 49%;
+    /*height: 12rem;*/
+    border-radius: 5px;
+    border: none;
+}
+.new-story{
+    padding:0 1rem;
+}
+.new-stroy-bg{
+    width: 100%;
+    height: auto;
+    padding:1rem 0;
+    margin: 0 auto;
+    background: #262626;
+    border-radius: 5px;
+    color: #AFB0B2;
+    position: absolute;
+    bottom: 0;
+}
+.task{
+    width: 100%;
+    position: absolute;
+    top: 43%;
+}
+.bask .btn{
+    margin-top: 1rem;
+}
+.task-rows{
+    height: 4rem;
+}
+.coverid{
+    width: 100%;
+    background: #fcf8e3;
+    border: 1px solid #faebcc;
+    border-radius: 4px;
+    padding:0.5rem 0;
+    color: #8a6d3b;
+}
+.xbg1{
+    position: absolute;
+    left: -13rem;
+    top: -1rem;
+}
+.haveto{
+    line-height: 2rem;
+}
+.page7{
+    background: #282828;
+}
+.btntips{
+    position: absolute;
+    top: 10rem;
+    right: 1rem;
+}
+.page7 p {
+    font-size: 3rem;
+    color: #000;
+    height: 100px;
+    top: 60%;
+    margin-top: -60px;
+}
+.link{
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.btntips2{
+    position: absolute;
+    top: 50%;
+}
+.txt-agent{
+    padding:0.5rem 1rem;
+    font-size: 1.4rem;
+}
+.txt-shaw-info{
+    position: absolute;
+    right: 0;
+    width: 200px;
+}
+.btn-meet1{
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+}
+.btn-meet2{
+    position: absolute;
+    right: 1rem;
+    top: -4rem;
+}
+.xbg2{
+    position: absolute;
+    bottom: -1rem;
+    left: -1rem;
+}
+.bg-gray{
+    background: #383F4B;
+}
+#cover{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.msg{
+    width: 100%;
+}
+.img-agent0{
+    width: 100%;
+}
+.btn-shawid0{
+    width: 4rem;
+    border: none;
+    height: 4rem;
+    background: url(../img/btn_03.png);
+    background-size: 100% 100%;
+}
+.btn-danger{
+    background-color: #323232;
+    border-color: #6d6d6d;
+}
+.goodbye{
+    width: 100%;
+}
+.img-meet0 .col-xs-6{
+    padding-left: 0;
+    padding-right: 0;
+}
+.fimg1{
+    height: 14rem;
+}
